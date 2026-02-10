@@ -1,0 +1,200 @@
+/* Green and Blue Theme for Dosth Construction */
+
+/* Primary Colors */
+:root {
+  --primary-green: #22c55e; /* vibrant green */
+  --primary-blue: #3b82f6; /* vibrant blue */
+  --secondary-green: #16a34a; /* darker green */
+  --secondary-blue: #2563eb; /* darker blue */
+  --accent-teal: #06b6d4; /* teal accent */
+  --accent-cyan: #0891b2; /* cyan accent */
+  
+  /* Background Colors */
+  --bg-dark: #0f172a; /* dark blue background */
+  --bg-darker: #0b1120; /* even darker background */
+  --bg-card: #1e293b; /* card background */
+  
+  /* Text Colors */
+  --text-light: #f1f5f9; /* light text */
+  --text-gray: #94a3b8; /* gray text */
+  --text-dark: #0f172a; /* dark text for contrast */
+  
+  /* Border Colors */
+  --border-light: #334155;
+  --border-accent: #22c55e;
+  
+  /* Gradient Colors */
+  --gradient-primary: linear-gradient(90deg, var(--primary-green), var(--primary-blue));
+  --gradient-secondary: linear-gradient(90deg, var(--secondary-green), var(--secondary-blue));
+  --gradient-accent: linear-gradient(90deg, var(--accent-teal), var(--accent-cyan));
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.bg-primary-gradient {
+  background: var(--gradient-primary);
+}
+
+.text-primary-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-primary-gradient {
+  border-image: var(--gradient-primary);
+  border-image-slice: 1;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--text-dark);
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--gradient-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--gradient-primary);
+  color: var(--text-dark);
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.2);
+}
+
+/* Card Styles */
+.card-primary {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.card-primary:hover {
+  border-color: var(--primary-green);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Text Colors */
+.text-green {
+  color: var(--primary-green);
+}
+
+.text-blue {
+  color: var(--primary-blue);
+}
+
+.text-teal {
+  color: var(--accent-teal);
+}
+
+/* Background Colors */
+.bg-dark-primary {
+  background-color: var(--bg-dark);
+}
+
+.bg-dark-secondary {
+  background-color: var(--bg-darker);
+}
+
+.bg-card {
+  background-color: var(--bg-card);
+}
+
+/* Border Colors */
+.border-green {
+  border-color: var(--primary-green);
+}
+
+.border-blue {
+  border-color: var(--primary-blue);
+}
+
+/* Shadow Effects */
+.shadow-green {
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
+}
+
+.shadow-blue {
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
+}
+
+/* Hover Effects */
+.hover-scale:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.hover-shadow-green:hover {
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.2);
+}
+
+.hover-shadow-blue:hover {
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-green);
+  border-radius: 10px;
+  border: 2px solid var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-green);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-green) var(--bg-darker);
+}
+
+/* Scrollbar Hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
