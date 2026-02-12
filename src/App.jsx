@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion"; // Added motion import
 import Home from "./components/pages/Home";
 import Navbar from "./components/navbar/Navbar";
